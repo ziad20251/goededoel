@@ -15,4 +15,8 @@ public class GoedeDoelTest {
     void getNaam() {
         assertThat(goedeDoel.getNaam()).isEqualTo(NAAM);
     }
+    @Test
+    void eenNieuweDoelHeeftNogGeenOpbrengst(){
+        assertThat(goedeDoel.getOpbrengst()).isZero();
+    }
 }
