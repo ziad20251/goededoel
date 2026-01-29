@@ -19,4 +19,12 @@ public class GoedeDoelTest {
     void eenNieuweDoelHeeftNogGeenOpbrengst(){
         assertThat(goedeDoel.getOpbrengst()).isZero();
     }
+    @Test
+    void doelenMetDezelfdeNaamZijnGelijk() {
+        assertThat(goedeDoel).isEqualTo(new GoedeDoel(NAAM));
+    }
+    @Test
+    void doelenMetVerschillendeNaamZijnVerschillend() {
+        assertThat(goedeDoel).isNotEqualTo(new GoedeDoel("WWF"));
+    }
 }
